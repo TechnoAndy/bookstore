@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math-magicians
+# Bookstore
 
 - In this project I layed the foundations for my Bookstore website
 ## Built With

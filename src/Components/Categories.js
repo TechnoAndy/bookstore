@@ -1,7 +1,5 @@
-function Categories () {
-    return (
-        <button type="submit">Check Status</button>
-    );
+function Categories() {
+  return <button type="submit">Check Status</button>;
 }
 
 export default Categories;

@@ -2,8 +2,8 @@
 function AddNewBook() {
   return (
     <form>
-      <input placeholder="Book Title" />
-      <input placeholder="Book Author" />
+      <input type="text" placeholder="Book Title" />
+      <input type="text" placeholder="Book Author" />
       <button type="submit">ADD BOOK</button>
     </form>
   );

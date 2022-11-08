@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import PropTypes from 'prop-types';
 
 function Book(props) {

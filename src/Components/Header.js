@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { Link } from 'react-router-dom';
 
 function Header() {

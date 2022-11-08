@@ -1,7 +1,9 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable linebreak-style */
 import React from 'react';
 import Book from './Book';
 
-const Books = () => {
+function Books() {
   return (
     <>
       <div className="books-shelf">
@@ -9,6 +11,6 @@ const Books = () => {
       </div>
     </>
   );
-};
+}
 
 export default Books;

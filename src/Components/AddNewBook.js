@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 function AddNewBook() {
   return (
     <form>

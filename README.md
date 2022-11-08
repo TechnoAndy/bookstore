@@ -7,6 +7,7 @@
 - In this project I layed the foundations for my Bookstore website
 ## Built With
 - Create-react-app
+- React
 - Linters
 - github folder with linters.yml files
 - babelrc

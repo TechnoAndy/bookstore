@@ -4,7 +4,8 @@
 
 # Bookstore
 
-- In this project I layed the foundations for my Bookstore website
+- In this project I configured my Redux Store and wrote actions and reducers for adding and removing books.
+
 ## Built With
 - Create-react-app
 - React

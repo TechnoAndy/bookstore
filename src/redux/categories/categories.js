@@ -8,11 +8,11 @@ export const checkStatus = () => ({
   type: CHECK_STATUS,
 });
 
-const cReducer = (state = initState, action) => {
+const categoriesReducer = (state = initState, action) => {
   if (action.type === CHECK_STATUS) {
     return 'Under construction';
   }
   return state;
 };
 
-export default cReducer;
+export default categoriesReducer;

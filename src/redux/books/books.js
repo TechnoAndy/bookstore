@@ -15,7 +15,7 @@ export const removeBook = (payload) => ({
   payload,
 });
 
-const bReducer = (state = initState, action) => {
+const booksReducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
@@ -27,4 +27,4 @@ const bReducer = (state = initState, action) => {
   }
 };
 
-export default bReducer;
+export default booksReducer;

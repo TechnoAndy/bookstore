@@ -1,14 +1,12 @@
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-const initState = {
-  books: [],
-};
+const initialState = [];
 
 export const checkStatus = () => ({
   type: CHECK_STATUS,
 });
 
-const categoriesReducer = (state = initState, action) => {
+const categoriesReducer = (state = initialState, action) => {
   if (action.type === CHECK_STATUS) {
     return 'Under construction';
   }

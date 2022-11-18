@@ -173,8 +173,8 @@ body {
 }
 
 .oval {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   border-width: 5px;
   border: 5px solid #0290ff;

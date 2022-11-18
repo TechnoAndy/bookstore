@@ -13,7 +13,7 @@ function Categories() {
   };
   return (
     <>
-      <button onClick={handleSubmit} type="submit">Check Status</button>
+      <button className="status-btn" onClick={handleSubmit} type="submit">Check Status</button>
       <p>{msgPlaceholder}</p>
     </>
   );

@@ -11,26 +11,29 @@ function Book(props) {
   };
 
   return (
-    <div className="book-placeholder">
+    <div className="book-list">
       <div>
-        <span className="category-placeholder">Category</span>
+        <span className="category">Category</span>
         <h2>{title}</h2>
-        <span className="author-placeholder">{author}</span>
-        <div className="buttons">
+        <span className="author">{author}</span>
+        <div className="btn">
           <button type="submit">Comments</button>
           <button onClick={handleSubmit} type="submit">Remove</button>
           <button type="submit">Edit</button>
         </div>
       </div>
-      <div className="book-details">
-        <div className="chart-col">
-          <div className="pie" />
-          <div className="chart-desc">
-            <span className="perc">28%</span>
-            <span className="status">Not completed</span>
+      <div className="reading-preview">
+        <div className="pre">
+          <div className="progress" />
+          <div className="reading-desc">
+            <div className="oval" />
+            <div className="p-container">
+              <span className="percent-complete">78%</span>
+              <span className="com">Completed</span>
+            </div>
           </div>
         </div>
-        <div className="chapter-col">
+        <div className="chapter-progress">
           <h3>CURRENT CHAPTER</h3>
           <p>Chapter 5</p>
           <button type="submit">UPDATE PROGRESS</button>

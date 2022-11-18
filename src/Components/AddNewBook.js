@@ -4,21 +4,21 @@ import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 function AddNewBook() {
-  const [inputs, setInputs] = useState({
+  const [cue, setCue] = useState({
     title: '',
     author: '',
   });
   const dispatch = useDispatch();
 
-  const handleInputs = (e) => {
+  const manageInfo = (e) => {
     const input = e.target.value;
 
     switch (e.target.id) {
       case 'title':
-        setInputs((inputs) => ({ ...inputs, title: input }));
+        setCue((inputs) => ({ ...inputs, title: input }));
         break;
       case 'author':
-        setInputs((inputs) => ({ ...inputs, author: input }));
+        setCue((inputs) => ({ ...inputs, author: input }));
         break;
       default:
         break;
@@ -29,28 +29,18 @@ function AddNewBook() {
     e.preventDefault();
     const newBook = {
       item_id: uuidv4(),
-      title: inputs.title,
-      author: inputs.author,
+      title: cue.title,
+      author: cue.author,
       category: 'none',
     };
     dispatch(addBook(newBook));
   };
   return (
-    <div id="addbook-form">
+    <div className="add-new-book">
       <h2>ADD NEW BOOK</h2>
       <form>
-        <input
-          id="title"
-          onChange={handleInputs}
-          placeholder="Book Title"
-          value={inputs.title}
-        />
-        <input
-          id="author"
-          onChange={handleInputs}
-          placeholder="Book Author"
-          value={inputs.author}
-        />
+        <input id="title" onChange={manageInfo} placeholder="Book Title" value={cue.title} />
+        <input id="author" onChange={manageInfo} placeholder="Book Author" value={cue.author} />
         <button onClick={handleSubmit} type="submit">ADD BOOK</button>
       </form>
     </div>

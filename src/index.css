@@ -1,7 +1,6 @@
 /* stylelint-disable no-descending-specificity */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Roboto+Slab:wght@100;200;300;400&display=swap");
 
-
 * {
   margin: 0;
   padding: 0;
@@ -68,7 +67,7 @@ body {
   color: #1f1f1f;
 }
 
-category {
+.category {
   font-size: 0.9rem;
   font-weight: 600;
   color: #bcb9b9;
@@ -92,7 +91,6 @@ category {
 }
 
 .status-btn {
-  margin-top: 15px;
   border: none;
   font-weight: 500;
   padding: 15px 25px;
@@ -103,7 +101,6 @@ category {
   font-size: 1.8rem;
   color: #fff;
   background-color: #0290ff;
-  padding: auto;
 }
 
 .btn button:nth-child(2) {
@@ -165,7 +162,7 @@ category {
   gap: 20px;
 }
 
-.p-container{
+.p-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,8 +173,8 @@ category {
 }
 
 .oval {
-  width:6rem;
-  height:6rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   border-width: 5px;
   border: 5px solid #0290ff;

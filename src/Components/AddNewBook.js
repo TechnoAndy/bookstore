@@ -1,30 +1,59 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 function AddNewBook() {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [inputs, setInputs] = useState({
+    title: '',
+    author: '',
+  });
   const dispatch = useDispatch();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const book = {
-      id: nanoid(),
-      title,
-      author,
-    };
-    setTitle('');
-    setAuthor('');
-    dispatch(addBook(book));
+
+  const handleInputs = (e) => {
+    const input = e.target.value;
+
+    switch (e.target.id) {
+      case 'title':
+        setInputs((inputs) => ({ ...inputs, title: input }));
+        break;
+      case 'author':
+        setInputs((inputs) => ({ ...inputs, author: input }));
+        break;
+      default:
+        break;
+    }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newBook = {
+      item_id: uuidv4(),
+      title: inputs.title,
+      author: inputs.author,
+      category: 'none',
+    };
+    dispatch(addBook(newBook));
+  };
   return (
-    <form className="book-form" onSubmit={handleSubmit}>
-      <input className="data-input" type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input className="data-input" type="text" placeholder="Book Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
-      <button type="submit">ADD BOOK</button>
-    </form>
+    <div id="addbook-form">
+      <h2>ADD NEW BOOK</h2>
+      <form>
+        <input
+          id="title"
+          onChange={handleInputs}
+          placeholder="Book Title"
+          value={inputs.title}
+        />
+        <input
+          id="author"
+          onChange={handleInputs}
+          placeholder="Book Author"
+          value={inputs.author}
+        />
+        <button onClick={handleSubmit} type="submit">ADD BOOK</button>
+      </form>
+    </div>
   );
 }
 

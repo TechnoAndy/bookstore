@@ -33,14 +33,14 @@ body {
 }
 
 .nav-bar a {
+  font-weight: 700;
   margin: 10px;
   text-decoration: none;
-  font-weight: 500;
   color: #5c5c5c;
 }
 
 .nav-bar a:hover {
-  color: #000;
+  color: #0290ff;
 }
 
 .book-shelf {
@@ -61,18 +61,18 @@ body {
   background-color: #fff;
 }
 
-category {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #bcb9b9;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .book-list h2 {
   margin-top: 5px;
   margin-bottom: 1px;
   font-family: 'Roboto', sans-serif;
   color: #1f1f1f;
+}
+
+category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #bcb9b9;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .author {
@@ -136,12 +136,6 @@ category {
   width: 38%;
 }
 
-.add-new-book input:focus {
-  border: 1px solid #0290ff;
-  outline: 1px solid #0290ff;
-  border-radius: 5px;
-}
-
 .add-new-book button {
   padding: 15px 25px;
   width: 24%;
@@ -153,14 +147,6 @@ category {
   background-color: #0290ff;
 }
 
-/* .add-new-book button:hover {
-  background-color: #abd4e1;
-} */
-
-/* .add-new-book button:active {
-  background-color: #15456c;
-} */
-
 .reading-preview {
   display: flex;
   align-items: center;
@@ -171,21 +157,6 @@ category {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.progress {
-  --w: 100px;
-
-  width: var(--w);
-  /* stylelint-disable-next-line csstree/validator */
-  aspect-ratio: 1;
-  position: relative;
-  display: inline-grid;
-  place-content: center;
-  margin: 5px;
-  font-size: 25px;
-  font-weight: bold;
-  font-family: sans-serif;
 }
 
 .reading-desc {
@@ -240,11 +211,3 @@ category {
   color: #fff;
   background-color: #0290ff;
 }
-
-/* .chapter-progress button:hover {
-  background-color: #0290c0;
-}
-
-.chapter-progress button:active {
-  background-color: #025090;
-} */

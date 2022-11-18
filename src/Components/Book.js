@@ -35,7 +35,7 @@ function Book(props) {
         </div>
         <div className="chapter-progress">
           <h3>CURRENT CHAPTER</h3>
-          <p>Chapter 5</p>
+          <p>Chapter 12</p>
           <button type="submit">UPDATE PROGRESS</button>
         </div>
       </div>
